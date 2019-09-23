@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controller.AdminController;
+import com.revature.util.Logger;
 
 
 
@@ -17,13 +18,13 @@ import com.revature.controller.AdminController;
 
 public class AdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+	private static final Logger logger=Logger.getInstance();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
         String name = request.getParameter("name");
         String password=request.getParameter("password");
-        System.out.println(name);
-        System.out.println(password);
+        logger.info(name);
+        logger.info(password);
         AdminController ac=new AdminController();
         String json=ac.login(name,password);
         PrintWriter out=response.getWriter();
