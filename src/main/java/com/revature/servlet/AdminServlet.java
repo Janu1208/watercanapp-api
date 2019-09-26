@@ -21,12 +21,12 @@ public class AdminServlet extends HttpServlet {
 	private static final Logger logger=Logger.getInstance();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-        String name = request.getParameter("name");
-        String password=request.getParameter("password");
-        logger.info(name);
-        logger.info(password);
+        String Name = request.getParameter("Name");
+        String Password=request.getParameter("Password");
+        logger.info(Name);
+        logger.info(Password);
         AdminController ac=new AdminController();
-        String json=ac.login(name,password);
+        String json=ac.login(Name,Password);
         PrintWriter out=response.getWriter();
         out.print(json);
         out.flush();

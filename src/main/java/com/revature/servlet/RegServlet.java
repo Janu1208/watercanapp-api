@@ -18,15 +18,13 @@ public class RegServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String name = request.getParameter("name");
-		String phone_number = request.getParameter("phone_number");
+		String phoneNumber = request.getParameter("phoneNumber");
 		String password = request.getParameter("password");
 		UserController uc = new UserController();
-		String json = uc.register(name, phone_number, password);
+		String json = uc.register(name, phoneNumber, password);
 		PrintWriter out = response.getWriter();
 		out.write(json);
 		out.flush();
-		
-
 	}
 
 }

@@ -19,10 +19,10 @@ public class ReserveCanServlet extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Reserve reserve=null;
-		String reserveCan=request.getParameter("reserveCan");
-		 int canReserve = Integer.parseInt(reserveCan);
-         reserve =new Reserve();
+		
+		String reserveCans=request.getParameter("reserveCans");
+		 int canReserve = Integer.parseInt(reserveCans);
+		 Reserve reserve =new Reserve();
 	     int userId= Integer.parseInt((request.getParameter("userId")));
          reserve.setUserId(userId);
          reserve.setReserveCans(canReserve);

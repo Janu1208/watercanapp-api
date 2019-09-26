@@ -18,12 +18,12 @@ public class UserLogServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;     
 	private static final Logger logger=Logger.getInstance();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String phone_number = request.getParameter("phone_number");
+		String phoneNumber = request.getParameter("phoneNumber");
         String password=request.getParameter("password");
-        logger.info(phone_number);
+        logger.info(phoneNumber);
         logger.info(password);
 		UserController uc=new UserController();
-        String json=uc.login(phone_number,password);
+        String json=uc.login(phoneNumber,password);
         PrintWriter out=response.getWriter();
         out.print(json);
         out.flush();
@@ -31,8 +31,3 @@ public class UserLogServlet extends HttpServlet {
     }
 		
 	}
-
-	
-	
-
-

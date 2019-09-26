@@ -7,14 +7,14 @@ import com.revature.service.UserServices;
 
 public class UserController {
 
-	public String register(String name, String phone_number, String password)  {
+	public String register(String name, String phoneNumber, String password)  {
 		String errorMessage = null;
 		String message = null;
 		User user = null;
 		try {
 			user = new User();
 			user.setName(name);
-			user.setPhone_number(phone_number);
+			user.setPhoneNumber(phoneNumber);
 			user.setPassword(password);
 			UserServices us = new UserServices();
 
@@ -32,13 +32,13 @@ public class UserController {
 		}
 		return obj.toString();
 	}
-	public String login(String phone_number,String password)
+	public String login(String phoneNumber,String password)
 	{
 		String errorMessage = null;
         User user  = null;
         try {
 			UserServices us = new UserServices();
-            user=us.login(phone_number, password);             
+            user=us.login(phoneNumber, password);             
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }       

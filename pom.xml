@@ -5,7 +5,7 @@
   <artifactId>watercanapp-api</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>watercanapp-api Maven Webapp</name>
+  <name>watercanappf-api Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -36,7 +36,7 @@
 		</dependency>
   </dependencies>
   <build>
-    <finalName>watercanapp-api</finalName>
+    <finalName>watercanappf-api</finalName>
   </build>
   
 </project>
