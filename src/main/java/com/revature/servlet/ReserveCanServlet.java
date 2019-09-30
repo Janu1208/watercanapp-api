@@ -31,9 +31,5 @@ public class ReserveCanServlet extends HttpServlet {
          PrintWriter out=response.getWriter();
 			out.print(json);
 			out.flush();
-	
 	}
-
-
-
 }

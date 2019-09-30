@@ -19,11 +19,9 @@ public class OrderCanServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Order order=null;
 		 
-		 String orderCan=request.getParameter("orderCans");
-		 int canOrder = Integer.parseInt(orderCan);
+		 String orderCans=request.getParameter("orderCans");
+		 int canOrder = Integer.parseInt(orderCans);
 		  order=new Order();
-
-		
 			int userId= Integer.parseInt((request.getParameter("userId")));
 		    
 			order.setUserId(userId);
